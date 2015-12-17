@@ -1,7 +1,7 @@
 name: sciencesimpact
 favicon: null
-layout_spectrum: 0.8258634738158435
-typography_spectrum: 0.8932904042303562
+layout_spectrum: 0.50355
+typography_spectrum: 0.50387
 title: IMPACT @ Griffith Sciences
 cta:
   domain: null
@@ -17,13 +17,13 @@ opengraph:
   appId: null
 color:
   brandColors:
-    - '#ADD7F6'
-    - '#87BFFF'
-    - '#3F8EFC'
-    - '#2667FF'
-    - '#3B28CC'
-  brandStrength: 0.1362432506866753
-  lightness: 0.5884317723102868
+    - '#e34a52'
+    - '#ffffff'
+    - '#f4b9bc'
+    - '#f8dcdd'
+    - '#ec888d'
+  brandStrength: 0.5
+  lightness: 0.875
   saturation: 0.3222104446031153
-  rhythmicContrast: 0.8085353903006762
+  rhythmicContrast: 0.5
 purpose: []
