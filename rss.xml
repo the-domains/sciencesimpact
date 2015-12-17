@@ -2,16 +2,23 @@
     <channel>
         <title><![CDATA[IMPACT @ Griffith Sciences]]></title>
         <description><![CDATA[IMPACT @ Griffith Sciences]]></description>
-        <link>http://github.com/dylang/node-rss</link>
+        <link>https://thegrid.ai/sciencesimpact/</link>
         <generator>The Grid</generator>
-        <lastBuildDate>Thu, 17 Dec 2015 02:39:28 GMT</lastBuildDate>
-        <atom:link href="undefinedrss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Thu, 17 Dec 2015 03:44:11 GMT</lastBuildDate>
+        <atom:link href="https://thegrid.ai/sciencesimpact/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[HOW UNIVERSITIES FIT INTO THE PARIS CLIMATE AGREEMENT]]></title>
-            <description><![CDATA[<article><h1>HOW UNIVERSITIES FIT INTO THE PARIS CLIMATE AGREEMENT</h1><img src="https://s3-us-west-2.amazonaws.com/the-grid-img/p/7b1fc5e06c4f907f080f2c78914cc9e85bb856e7.jpg"></article>]]></description>
-            <link>undefinedhow-universities-fit-into-the-paris-climate-agreement/index.html</link>
+            <description><![CDATA[<article><h1>HOW UNIVERSITIES FIT INTO THE PARIS CLIMATE AGREEMENT</h1><img src="https://s3-us-west-2.amazonaws.com/the-grid-img/p/08a2678e94026e2aa5765e2018d84e8ba5126172.jpg"></article>]]></description>
+            <link>https://thegrid.ai/sciencesimpact/how-universities-fit-into-the-paris-climate-agreement/index.html</link>
             <guid isPermaLink="false">95f7999c-6361-4412-9f8c-9b58f29264a3</guid>
             <pubDate>Thu, 17 Dec 2015 02:39:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[GIVING A CRAP: SANITATION A BASIC FUNCTION BUT A COMPLEX ISSUE]]></title>
+            <description><![CDATA[<article><h1>GIVING A CRAP: SANITATION A BASIC FUNCTION BUT A COMPLEX ISSUE</h1><h2>Know More:Centre for Population and Environmental Health</h2><p>In most situations and places, toilets and defecation are taboo topics for discussion. They are at the bottom of the list of topics for dinner table conversations.</p><img src="https://s3-us-west-2.amazonaws.com/the-grid-img/p/78c297ef8c6ba08074a97a536ba6100aa88f8f21.jpg"></article>]]></description>
+            <link>https://thegrid.ai/sciencesimpact/giving-a-crap-sanitation-a-basic-function-but-a-complex-iss/index.html</link>
+            <guid isPermaLink="false">f45155a1-e800-407e-ad8a-cf7b9ebb1b98</guid>
+            <pubDate>Thu, 17 Dec 2015 03:44:10 GMT</pubDate>
         </item>
     </channel>
 </rss>
