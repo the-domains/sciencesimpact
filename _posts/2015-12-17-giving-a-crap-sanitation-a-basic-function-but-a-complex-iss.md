@@ -1,27 +1,29 @@
 ---
 inFeed: true
 hasPage: true
-inNav: false
+inNav: true
 inLanguage: null
 starred: false
 keywords: []
 description: ''
-datePublished: '2015-12-17T03:44:10.983Z'
-dateModified: '2015-12-17T03:43:05.754Z'
+datePublished: '2015-12-17T22:19:30.011Z'
+dateModified: '2015-12-17T22:10:28.534Z'
 title: 'GIVING A CRAP: SANITATION A BASIC FUNCTION BUT A COMPLEX ISSUE'
 author: []
+sourcePath: _posts/2015-12-17-giving-a-crap-sanitation-a-basic-function-but-a-complex-iss.md
+published: true
 authors: []
 publisher:
   name: null
   domain: null
   url: null
   favicon: null
-sourcePath: _posts/2015-12-17-giving-a-crap-sanitation-a-basic-function-but-a-complex-iss.md
-published: true
 url: giving-a-crap-sanitation-a-basic-function-but-a-complex-iss/index.html
 _type: Article
 
 ---
+![](https://s3-us-west-2.amazonaws.com/the-grid-img/p/78c297ef8c6ba08074a97a536ba6100aa88f8f21.jpg)
+
 # GIVING A CRAP: SANITATION A BASIC FUNCTION BUT A COMPLEX ISSUE
 
 In most situations and places, toilets and defecation are taboo topics for discussion. They are at the bottom of the list of topics for dinner table conversations.
@@ -59,6 +61,5 @@ I hope I can make a small contribution to the world effort to end open defecatio
 Know More:[Centre for Population and Environmental Health][0]
 
 _This  article was written for the Federal Government's Australia Awards, which bring together scholarships and fellowships administered by the Department of Foreign Affairs and Trade, the Department of Education and the Australian Centre for International Agricultural Research.__The author is dual Australia Awards scholar and environmental engineer,**Ms Ni Made Utami Dwipayanti**, who is studying a PhD at Griffith University's[Centre for Population and Environmental Health][0]._
-![](https://the-grid-user-content.s3-us-west-2.amazonaws.com/86af65a0-3998-4fad-a9ac-29ebba3d83af.jpg)
 
 [0]: https://www.griffith.edu.au/environment-planning-architecture/centre-environment-population-health
