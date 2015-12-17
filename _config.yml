@@ -1,7 +1,7 @@
 name: sciencesimpact
 favicon: null
-layout_spectrum: 1
-typography_spectrum: 0.50387
+layout_spectrum: 0.87614
+typography_spectrum: 0.53413
 title: IMPACT @ Griffith Sciences
 cta:
   domain: null
@@ -20,10 +20,10 @@ color:
     - '#e34a52'
     - '#ffffff'
     - '#f4b9bc'
-    - '#f8dcdd'
-    - '#ec888d'
-  brandStrength: 0.5
-  lightness: 0.875
-  saturation: 0.3222104446031153
-  rhythmicContrast: 0.5
+    - '#e65f66'
+    - '#ec9498'
+  brandStrength: 0.375
+  lightness: 0.6875
+  saturation: 0.25
+  rhythmicContrast: 0.75
 purpose: []
