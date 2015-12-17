@@ -6,8 +6,8 @@ inLanguage: null
 starred: false
 keywords: []
 description: ''
-datePublished: '2015-12-17T22:19:34.351Z'
-dateModified: '2015-12-17T22:19:32.780Z'
+datePublished: '2015-12-17T22:19:35.332Z'
+dateModified: '2015-12-17T22:19:34.351Z'
 title: 'GIVING A CRAP: SANITATION A BASIC FUNCTION BUT A COMPLEX ISSUE'
 author: []
 sourcePath: _posts/2015-12-17-giving-a-crap-sanitation-a-basic-function-but-a-complex-iss.md
