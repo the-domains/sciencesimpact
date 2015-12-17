@@ -4,8 +4,15 @@
         <description><![CDATA[IMPACT @ Griffith Sciences]]></description>
         <link>https://thegrid.ai/sciencesimpact/</link>
         <generator>The Grid</generator>
-        <lastBuildDate>Thu, 17 Dec 2015 22:20:37 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 17 Dec 2015 22:28:02 GMT</lastBuildDate>
         <atom:link href="https://thegrid.ai/sciencesimpact/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[SEAWALLS: FROM CAR BODIES TO PRECISE ENGINEERING]]></title>
+            <description><![CDATA[<article><h1>SEAWALLS: FROM CAR BODIES TO PRECISE ENGINEERING</h1><p>Car boulderwall</p><img src="https://s3-us-west-2.amazonaws.com/the-grid-img/p/1eb6521c1ce06ec6da72360aa4e5d1b862baad26.jpg"></article>]]></description>
+            <link>http://app.griffith.edu.au/sciencesimpact/seawall-engineering/</link>
+            <guid isPermaLink="false">a86892ac-84c6-43dc-a5c0-31057adb71bb</guid>
+            <pubDate>Thu, 17 Dec 2015 22:27:50 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[HOW UNIVERSITIES FIT INTO THE PARIS CLIMATE AGREEMENT]]></title>
             <description><![CDATA[<article><h1>HOW UNIVERSITIES FIT INTO THE PARIS CLIMATE AGREEMENT</h1><p>A landmark agreement to cut the world’s reliance on fossil fuels and thus slow the pace of global warming presents an important opportunity for universities, says Griffith University’s Professor Brendan Mackey.</p><img src="https://s3-us-west-2.amazonaws.com/the-grid-img/p/bed4ebc757c1feab67c1baf74e8b4794e6dfba39.jpg"></article>]]></description>
@@ -15,10 +22,10 @@
         </item>
         <item>
             <title><![CDATA[GIVING A CRAP: SANITATION A BASIC FUNCTION BUT A COMPLEX ISSUE]]></title>
-            <description><![CDATA[<article><h1>GIVING A CRAP: SANITATION A BASIC FUNCTION BUT A COMPLEX ISSUE</h1><h2>Know More:Centre for Population and Environmental Health</h2><p>In most situations and places, toilets and defecation are taboo topics for discussion. They are at the bottom of the list of topics for dinner table conversations.</p><img src="https://s3-us-west-2.amazonaws.com/the-grid-img/p/a5bbb42cc7f0f971c11ae6705cde0f11a40cf9d9.jpg"></article>]]></description>
+            <description><![CDATA[<article><h1>GIVING A CRAP: SANITATION A BASIC FUNCTION BUT A COMPLEX ISSUE</h1><h2>Know More:Centre for Population and Environmental Health</h2><p>In most situations and places, toilets and defecation are taboo topics for discussion. They are at the bottom of the list of topics for dinner table conversations.</p><img src="https://s3-us-west-2.amazonaws.com/the-grid-img/p/52dbdb0eb0f9c9588212c763582f18aa63af3e8d.jpg"></article>]]></description>
             <link>https://thegrid.ai/sciencesimpact/giving-a-crap-sanitation-a-basic-function-but-a-complex-iss/index.html</link>
             <guid isPermaLink="false">f45155a1-e800-407e-ad8a-cf7b9ebb1b98</guid>
-            <pubDate>Thu, 17 Dec 2015 22:19:35 GMT</pubDate>
+            <pubDate>Thu, 17 Dec 2015 22:19:37 GMT</pubDate>
         </item>
     </channel>
 </rss>
