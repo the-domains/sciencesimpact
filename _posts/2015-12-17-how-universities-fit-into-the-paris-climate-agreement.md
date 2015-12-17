@@ -3,11 +3,11 @@ inFeed: true
 hasPage: true
 inNav: true
 inLanguage: null
-starred: true
+starred: false
 keywords: []
 description: ''
-datePublished: '2015-12-17T03:47:59.385Z'
-dateModified: '2015-12-17T03:47:50.089Z'
+datePublished: '2015-12-17T21:56:01.723Z'
+dateModified: '2015-12-17T04:42:28.003Z'
 title: HOW UNIVERSITIES FIT INTO THE PARIS CLIMATE AGREEMENT
 author: []
 sourcePath: _posts/2015-12-17-how-universities-fit-into-the-paris-climate-agreement.md
@@ -22,6 +22,8 @@ url: how-universities-fit-into-the-paris-climate-agreement/index.html
 _type: Article
 
 ---
+![](https://the-grid-user-content.s3-us-west-2.amazonaws.com/a400ddb6-57d8-43e6-9f41-e7d02500c1f0.jpg)
+
 # HOW UNIVERSITIES FIT INTO THE PARIS CLIMATE AGREEMENT
 
 A landmark agreement to cut the world's reliance on fossil fuels and thus slow the pace of global warming presents an important opportunity for universities, says Griffith University's Professor Brendan Mackey.
