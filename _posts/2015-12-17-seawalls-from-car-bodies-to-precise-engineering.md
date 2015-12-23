@@ -1,13 +1,13 @@
 ---
 inFeed: true
 hasPage: true
-inNav: true
+inNav: false
 inLanguage: null
 starred: false
 keywords: []
 description: ''
-datePublished: '2015-12-23T01:57:26.425Z'
-dateModified: '2015-12-23T01:57:07.320Z'
+datePublished: '2015-12-23T02:11:58.653Z'
+dateModified: '2015-12-23T02:11:23.338Z'
 author: []
 title: 'SEAWALLS: FROM CAR BODIES TO PRECISE ENGINEERING'
 sourcePath: _posts/2015-12-17-seawalls-from-car-bodies-to-precise-engineering.md
