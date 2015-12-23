@@ -3,11 +3,11 @@ inFeed: true
 hasPage: true
 inNav: false
 inLanguage: null
-starred: false
+starred: true
 keywords: []
 description: ''
-datePublished: '2015-12-23T02:11:48.789Z'
-dateModified: '2015-12-23T02:11:38.632Z'
+datePublished: '2015-12-23T02:12:29.280Z'
+dateModified: '2015-12-23T02:12:04.665Z'
 title: HOW UNIVERSITIES FIT INTO THE PARIS CLIMATE AGREEMENT
 author: []
 sourcePath: _posts/2015-12-17-how-universities-fit-into-the-paris-climate-agreement.md
