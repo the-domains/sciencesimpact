@@ -1,24 +1,24 @@
 ---
 inFeed: true
-hasPage: false
-inNav: false
-isBasedOnUrl: 'http://app.griffith.edu.au/sciencesimpact/seawall-engineering/'
+hasPage: true
+inNav: true
 inLanguage: null
 starred: false
 keywords: []
 description: ''
-datePublished: '2015-12-17T22:27:50.560Z'
-dateModified: '2015-12-17T22:27:41.805Z'
+datePublished: '2015-12-23T01:57:26.425Z'
+dateModified: '2015-12-23T01:57:07.320Z'
 author: []
 title: 'SEAWALLS: FROM CAR BODIES TO PRECISE ENGINEERING'
+sourcePath: _posts/2015-12-17-seawalls-from-car-bodies-to-precise-engineering.md
+published: true
 authors: []
 publisher:
   name: app.griffith.edu.au
   domain: app.griffith.edu.au
   url: null
   favicon: null
-sourcePath: _posts/2015-12-17-seawalls-from-car-bodies-to-precise-engineering.md
-published: true
+url: seawalls-from-car-bodies-to-precise-engineering/index.html
 _context: 'http://schema.org'
 _type: Article
 
