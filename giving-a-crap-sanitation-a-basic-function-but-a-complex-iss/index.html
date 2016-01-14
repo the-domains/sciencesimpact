@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>GIVING A CRAP: SANITATION A BASIC FUNCTION BUT A COMPLEX ISSUE - sciencesimpact</title><link href="../rss.xml" title="IMPACT @ Griffith Sciences feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.16.25"><meta name="the-grid-solution" content="1103356f-c520-4963-9a38-75ab1c61cb3a"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
+<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>GIVING A CRAP: SANITATION A BASIC FUNCTION BUT A COMPLEX ISSUE - sciencesimpact</title><link href="../rss.xml" title="IMPACT @ Griffith Sciences feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.17.3"><meta name="the-grid-solution" content="f5ff8df2-1881-44b6-b358-542e9085f09e"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
 @media (min-width: 15.6875em)and (max-width: 15.75em){	html{font-size:3.28125em !important}}
 @media (min-width: 15.8125em)and (max-width: 16.25em){	html{font-size:3.375em !important}}
 @media (min-width: 16.3125em)and (max-width: 16.6875em){html{font-size:3.46875em !important}}
@@ -202,6 +202,14 @@ body {
 }
 .stack {
   z-index: 1;
+  transition: transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+}
+.group,
+.aside,
+.decoration {
+  transition: transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
 }
 picture {
   display: inline-block;
@@ -250,6 +258,9 @@ a:active {
   transition: color 0.1s ease-in, background-color 0.1s ease-out;
   -webkit-transition: color 0.1s ease-in, background-color 0.1s ease-out;
 }
+a.aside {
+  display: inline-block;
+}
 html.exporting a {
   transition: none;
 }
@@ -259,11 +270,21 @@ html.exporting a {
 .media > a {
   display: inline-block;
 }
+.media iframe {
+  transition: 0.3s opacity ease-in;
+  -webkit-transition: 0.3s opacity ease-in;
+}
 h1 a,
 h2 a,
 h3 a {
   font-weight: inherit;
   letter-spacing: inherit;
+}
+a {
+  -webkit-box-decoration-break: clone;
+  -ms-box-decoration-break: clone;
+  -moz-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 .text-decoration {
   -webkit-box-decoration-break: clone;
@@ -277,36 +298,50 @@ h3 a {
   margin-left: 1.5em;
 }
 .decoration {
-  position: relative;
   pointer-events: none;
+}
+.svg {
+  position: relative;
   background-color: currentColor;
 }
-.decoration > svg {
+.svg > svg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.decoration.connector > svg {
+.svg.connector > svg {
   width: 109%;
   height: 109%;
   margin-left: -2%;
 }
-.decoration path,
-.decoration ellipse,
-.decoration rect,
-.decoration polygon,
-.decoration circle {
+.svg path,
+.svg ellipse,
+.svg rect,
+.svg polygon,
+.svg circle {
   fill: currentColor;
 }
-.decoration mpath,
-.decoration line,
-.decoration polyline {
+.svg mpath,
+.svg line,
+.svg polyline {
   stroke: currentColor;
 }
-.svg.decoration {
+.svg {
   background-color: transparent;
+}
+.revealed .play.svg:after {
+  display: block;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  margin-top: -20px;
+  margin-left: -20px;
+  background-color: currentColor;
+  content: "";
 }
 .colors-style-aside-border .publisher,
 .colors-style-aside-border .author {
@@ -453,7 +488,8 @@ ul {
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover{overflow: hidden; width: 3.844rem; height: 2.174rem; position: absolute; left: 0.124rem; top: 2.774rem;}
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover-img#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover-img{height: 2.174rem; width: 3.854rem; position: absolute; top: 0rem; left: 0rem;}
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-t-headline#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-t-headline{font-size: 0.524rem; line-height: 0.684rem; width: 3.844rem; position: absolute; top: 0rem; left: 0.124rem;}
-#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .media.cover { background-image: linear-gradient(rgb(39, 38, 34), rgb(202, 209, 215)); }
+#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .media.cover { background-image: linear-gradient(rgb(39, 38, 34), rgb(202, 209, 215)); color: rgb(202, 209, 215); }
+#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed :hover.media.cover { color: rgb(33, 31, 28); }
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .title.headline { color: rgb(226, 230, 233); }
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .title.headline a:hover { color: rgb(227, 228, 230); }
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c a { color: rgb(202, 209, 215); }
@@ -470,7 +506,7 @@ ul {
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-t-paragraph>p:nth-of-type(4){margin-top: 0.244rem;}
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-t-paragraph>p:nth-of-type(5){margin-top: 0.244rem;}
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-t-paragraph>p:nth-of-type(6){margin-top: 0.244rem;}
-#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-mobile#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-mobile{height: 0.064rem; width: 0.144rem; position: absolute; top: 1.464rem; left: 0.124rem;}
+#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-mobile#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-mobile{height: 0.064rem; width: 0.144rem; position: absolute; left: 0.124rem; top: 1.464rem;}
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8 .group.textual > .title.headline { color: rgb(226, 230, 233); }
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8 .group.textual > .title.headline a:hover { color: rgb(227, 228, 230); }
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8 .group.textual > .text.paragraph { color: rgb(244, 241, 240); }
@@ -529,7 +565,7 @@ ul {
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual{opacity: 1; font-size: 0.164rem; line-height: 0.244rem; height: 3.214rem; width: 4.084rem; position: absolute; left: 0.124rem; top: 0.244rem;}
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-subtitle#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-subtitle{font-size: 0.244rem; line-height: 0.324rem; width: 3.844rem; position: absolute; top: 0rem; left: 0.124rem;}
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-paragraph#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-paragraph{font-size: 0.164rem; line-height: 0.244rem; width: 3.844rem; position: absolute; top: 0.794rem; left: 0.124rem;}
-#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-mobile#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-mobile{height: 0.064rem; width: 0.144rem; position: absolute; top: 0.694rem; left: 0.124rem;}
+#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-mobile#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-mobile{height: 0.064rem; width: 0.144rem; position: absolute; left: 0.124rem; top: 0.694rem;}
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad#u-384eb0fe-2207-45ab-a69d-97de301bb0ad .group.textual > .title.subtitle { color: rgb(226, 230, 233); }
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad#u-384eb0fe-2207-45ab-a69d-97de301bb0ad .group.textual > .title.subtitle a:hover { color: rgb(227, 228, 230); }
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad#u-384eb0fe-2207-45ab-a69d-97de301bb0ad .group.textual > .text.paragraph { color: rgb(244, 241, 240); }
@@ -613,7 +649,8 @@ display: none;
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover{overflow: hidden; width: 5.764rem; height: 3.254rem; position: absolute; left: 0.184rem; top: 2.124rem;}
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover-img#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover-img{height: 3.254rem; width: 5.774rem; position: absolute; top: 0rem; left: 0rem;}
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-t-headline#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-t-headline{font-size: 0.524rem; line-height: 0.684rem; width: 5.764rem; position: absolute; top: 0rem; left: 0.184rem;}
-#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .media.cover { background-image: linear-gradient(rgb(39, 38, 34), rgb(202, 209, 215)); }
+#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .media.cover { background-image: linear-gradient(rgb(39, 38, 34), rgb(202, 209, 215)); color: rgb(202, 209, 215); }
+#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed :hover.media.cover { color: rgb(33, 31, 28); }
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .title.headline { color: rgb(226, 230, 233); }
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .title.headline a:hover { color: rgb(227, 228, 230); }
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c a { color: rgb(202, 209, 215); }
@@ -630,7 +667,7 @@ display: none;
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-t-paragraph>p:nth-of-type(4){margin-top: 0.244rem;}
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-t-paragraph>p:nth-of-type(5){margin-top: 0.244rem;}
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-t-paragraph>p:nth-of-type(6){margin-top: 0.244rem;}
-#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-mobile#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-mobile{height: 0.084rem; width: 0.204rem; position: absolute; top: 1.024rem; left: 0.184rem;}
+#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-mobile#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-mobile{height: 0.084rem; width: 0.204rem; position: absolute; left: 0.184rem; top: 1.024rem;}
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8 .group.textual > .title.headline { color: rgb(226, 230, 233); }
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8 .group.textual > .title.headline a:hover { color: rgb(227, 228, 230); }
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8 .group.textual > .text.paragraph { color: rgb(244, 241, 240); }
@@ -689,7 +726,7 @@ display: none;
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual{opacity: 1; font-size: 0.164rem; line-height: 0.244rem; height: 2.334rem; width: 6.124rem; position: absolute; left: 0.184rem; top: 0.364rem;}
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-subtitle#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-subtitle{font-size: 0.244rem; line-height: 0.324rem; width: 5.764rem; position: absolute; top: 0rem; left: 0.184rem;}
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-paragraph#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-paragraph{font-size: 0.164rem; line-height: 0.244rem; width: 5.764rem; position: absolute; top: 0.874rem; left: 0.184rem;}
-#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-mobile#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-mobile{height: 0.084rem; width: 0.204rem; position: absolute; top: 0.724rem; left: 0.184rem;}
+#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-mobile#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-mobile{height: 0.084rem; width: 0.204rem; position: absolute; left: 0.184rem; top: 0.724rem;}
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad#u-384eb0fe-2207-45ab-a69d-97de301bb0ad .group.textual > .title.subtitle { color: rgb(226, 230, 233); }
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad#u-384eb0fe-2207-45ab-a69d-97de301bb0ad .group.textual > .title.subtitle a:hover { color: rgb(227, 228, 230); }
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad#u-384eb0fe-2207-45ab-a69d-97de301bb0ad .group.textual > .text.paragraph { color: rgb(244, 241, 240); }
@@ -765,7 +802,8 @@ display: none;
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover{overflow: hidden; width: 3.844rem; height: 2.174rem; position: absolute; left: 1.444rem; top: 2.884rem;}
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover-img#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover-img{height: 2.174rem; width: 3.854rem; position: absolute; top: 0rem; left: 0rem;}
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-t-headline#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-t-headline{font-size: 0.524rem; line-height: 0.684rem; width: 3.844rem; position: absolute; top: 0.064rem; left: 1.444rem;}
-#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .media.cover { background-image: linear-gradient(rgb(39, 38, 34), rgb(202, 209, 215)); }
+#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .media.cover { background-image: linear-gradient(rgb(39, 38, 34), rgb(202, 209, 215)); color: rgb(202, 209, 215); }
+#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed :hover.media.cover { color: rgb(33, 31, 28); }
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .title.headline { color: rgb(226, 230, 233); }
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .title.headline a:hover { color: rgb(227, 228, 230); }
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c a { color: rgb(202, 209, 215); }
@@ -782,7 +820,7 @@ display: none;
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-t-paragraph>p:nth-of-type(4){margin-top: 0.244rem;}
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-t-paragraph>p:nth-of-type(5){margin-top: 0.244rem;}
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-t-paragraph>p:nth-of-type(6){margin-top: 0.244rem;}
-#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-desktop#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-desktop{height: 0.064rem; width: 0.144rem; position: absolute; top: 1.574rem; left: 1.444rem;}
+#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-desktop#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-desktop{height: 0.064rem; width: 0.144rem; position: absolute; left: 1.444rem; top: 1.574rem;}
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8 .group.textual > .title.headline { color: rgb(226, 230, 233); }
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8 .group.textual > .title.headline a:hover { color: rgb(227, 228, 230); }
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8 .group.textual > .text.paragraph { color: rgb(244, 241, 240); }
@@ -841,7 +879,7 @@ display: none;
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual{opacity: 1; font-size: 0.164rem; line-height: 0.244rem; height: 3.434rem; width: 6.724rem; position: absolute; left: 0.964rem; top: 0.484rem;}
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-subtitle#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-subtitle{font-size: 0.244rem; line-height: 0.324rem; width: 3.844rem; position: absolute; top: 0.064rem; left: 1.444rem;}
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-paragraph#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-paragraph{font-size: 0.164rem; line-height: 0.244rem; width: 3.844rem; position: absolute; top: 0.954rem; left: 1.444rem;}
-#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-desktop#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-desktop{height: 0.064rem; width: 0.144rem; position: absolute; top: 0.804rem; left: 1.444rem;}
+#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-desktop#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-desktop{height: 0.064rem; width: 0.144rem; position: absolute; left: 1.444rem; top: 0.804rem;}
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad#u-384eb0fe-2207-45ab-a69d-97de301bb0ad .group.textual > .title.subtitle { color: rgb(226, 230, 233); }
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad#u-384eb0fe-2207-45ab-a69d-97de301bb0ad .group.textual > .title.subtitle a:hover { color: rgb(227, 228, 230); }
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad#u-384eb0fe-2207-45ab-a69d-97de301bb0ad .group.textual > .text.paragraph { color: rgb(244, 241, 240); }
@@ -918,7 +956,8 @@ display: none;
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover{overflow: hidden; width: 5.764rem; height: 3.254rem; position: absolute; left: 2.164rem; top: 2.284rem;}
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover-img#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover-img{height: 3.254rem; width: 5.774rem; position: absolute; top: 0rem; left: 0rem;}
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-t-headline#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-t-headline{font-size: 0.524rem; line-height: 0.684rem; width: 5.764rem; position: absolute; top: 0.094rem; left: 2.164rem;}
-#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .media.cover { background-image: linear-gradient(rgb(39, 38, 34), rgb(202, 209, 215)); }
+#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .media.cover { background-image: linear-gradient(rgb(39, 38, 34), rgb(202, 209, 215)); color: rgb(202, 209, 215); }
+#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed :hover.media.cover { color: rgb(33, 31, 28); }
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .title.headline { color: rgb(226, 230, 233); }
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .title.headline a:hover { color: rgb(227, 228, 230); }
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c a { color: rgb(202, 209, 215); }
@@ -935,7 +974,7 @@ display: none;
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-t-paragraph>p:nth-of-type(4){margin-top: 0.244rem;}
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-t-paragraph>p:nth-of-type(5){margin-top: 0.244rem;}
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-t-paragraph>p:nth-of-type(6){margin-top: 0.244rem;}
-#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-desktop#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-desktop{height: 0.084rem; width: 0.204rem; position: absolute; top: 1.184rem; left: 2.164rem;}
+#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-desktop#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-desktop{height: 0.084rem; width: 0.204rem; position: absolute; left: 2.164rem; top: 1.184rem;}
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8 .group.textual > .title.headline { color: rgb(226, 230, 233); }
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8 .group.textual > .title.headline a:hover { color: rgb(227, 228, 230); }
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8 .group.textual > .text.paragraph { color: rgb(244, 241, 240); }
@@ -994,7 +1033,7 @@ display: none;
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual{opacity: 1; font-size: 0.164rem; line-height: 0.244rem; height: 2.654rem; width: 10.084rem; position: absolute; left: 1.444rem; top: 0.724rem;}
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-subtitle#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-subtitle{font-size: 0.244rem; line-height: 0.324rem; width: 5.764rem; position: absolute; top: 0.094rem; left: 2.164rem;}
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-paragraph#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-paragraph{font-size: 0.164rem; line-height: 0.244rem; width: 5.764rem; position: absolute; top: 1.104rem; left: 2.164rem;}
-#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-desktop#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-desktop{height: 0.084rem; width: 0.204rem; position: absolute; top: 0.884rem; left: 2.164rem;}
+#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-desktop#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-desktop{height: 0.084rem; width: 0.204rem; position: absolute; left: 2.164rem; top: 0.884rem;}
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad#u-384eb0fe-2207-45ab-a69d-97de301bb0ad .group.textual > .title.subtitle { color: rgb(226, 230, 233); }
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad#u-384eb0fe-2207-45ab-a69d-97de301bb0ad .group.textual > .title.subtitle a:hover { color: rgb(227, 228, 230); }
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad#u-384eb0fe-2207-45ab-a69d-97de301bb0ad .group.textual > .text.paragraph { color: rgb(244, 241, 240); }
@@ -1071,7 +1110,8 @@ display: none;
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover{overflow: hidden; width: 7.204rem; height: 4.054rem; position: absolute; left: 2.704rem; top: 2.854rem;}
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover-img#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover-img{height: 4.054rem; width: 7.204rem; position: absolute; top: 0rem; left: 0rem;}
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-t-headline#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-t-headline{font-size: 0.654rem; line-height: 0.854rem; width: 7.204rem; position: absolute; top: 0.124rem; left: 2.704rem;}
-#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .media.cover { background-image: linear-gradient(rgb(39, 38, 34), rgb(202, 209, 215)); }
+#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .media.cover { background-image: linear-gradient(rgb(39, 38, 34), rgb(202, 209, 215)); color: rgb(202, 209, 215); }
+#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed :hover.media.cover { color: rgb(33, 31, 28); }
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .title.headline { color: rgb(226, 230, 233); }
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .title.headline a:hover { color: rgb(227, 228, 230); }
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c a { color: rgb(202, 209, 215); }
@@ -1088,7 +1128,7 @@ display: none;
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-t-paragraph>p:nth-of-type(4){margin-top: 0.304rem;}
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-t-paragraph>p:nth-of-type(5){margin-top: 0.304rem;}
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-t-paragraph>p:nth-of-type(6){margin-top: 0.304rem;}
-#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-cinema#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-cinema{height: 0.104rem; width: 0.254rem; position: absolute; top: 1.484rem; left: 2.704rem;}
+#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-cinema#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-cinema{height: 0.104rem; width: 0.254rem; position: absolute; left: 2.704rem; top: 1.484rem;}
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8 .group.textual > .title.headline { color: rgb(226, 230, 233); }
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8 .group.textual > .title.headline a:hover { color: rgb(227, 228, 230); }
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8 .group.textual > .text.paragraph { color: rgb(244, 241, 240); }
@@ -1147,7 +1187,7 @@ display: none;
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual{opacity: 1; font-size: 0.204rem; line-height: 0.304rem; height: 3.594rem; width: 12.604rem; position: absolute; left: 1.804rem; top: 0.904rem;}
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-subtitle#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-subtitle{font-size: 0.304rem; line-height: 0.394rem; width: 7.204rem; position: absolute; top: 0.124rem; left: 2.704rem;}
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-paragraph#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-paragraph{font-size: 0.204rem; line-height: 0.304rem; width: 7.204rem; position: absolute; top: 1.364rem; left: 2.704rem;}
-#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-cinema#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-cinema{height: 0.104rem; width: 0.254rem; position: absolute; top: 1.084rem; left: 2.704rem;}
+#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-cinema#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-cinema{height: 0.104rem; width: 0.254rem; position: absolute; left: 2.704rem; top: 1.084rem;}
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad#u-384eb0fe-2207-45ab-a69d-97de301bb0ad .group.textual > .title.subtitle { color: rgb(226, 230, 233); }
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad#u-384eb0fe-2207-45ab-a69d-97de301bb0ad .group.textual > .title.subtitle a:hover { color: rgb(227, 228, 230); }
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad#u-384eb0fe-2207-45ab-a69d-97de301bb0ad .group.textual > .text.paragraph { color: rgb(244, 241, 240); }
@@ -1224,7 +1264,8 @@ display: none;
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover{overflow: hidden; width: 7.204rem; height: 4.064rem; position: absolute; left: 2.714rem; top: 1.584rem;}
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover-img#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover-img{height: 4.064rem; width: 7.214rem; position: absolute; top: 0rem; left: 0rem;}
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-t-headline#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-t-headline{font-size: 0.494rem; line-height: 0.644rem; width: 7.204rem; position: absolute; top: 0.124rem; left: 2.714rem;}
-#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .media.cover { background-image: linear-gradient(rgb(39, 38, 34), rgb(202, 209, 215)); }
+#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .media.cover { background-image: linear-gradient(rgb(39, 38, 34), rgb(202, 209, 215)); color: rgb(202, 209, 215); }
+#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed :hover.media.cover { color: rgb(33, 31, 28); }
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .title.headline { color: rgb(226, 230, 233); }
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c .group.mixed > .title.headline a:hover { color: rgb(227, 228, 230); }
 #u-4b65af34-8b6a-4f9f-983c-8ce087f6576c#u-4b65af34-8b6a-4f9f-983c-8ce087f6576c a { color: rgb(202, 209, 215); }
@@ -1241,7 +1282,7 @@ display: none;
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-t-paragraph>p:nth-of-type(4){margin-top: 0.234rem;}
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-t-paragraph>p:nth-of-type(5){margin-top: 0.234rem;}
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-t-paragraph>p:nth-of-type(6){margin-top: 0.234rem;}
-#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-cinema#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-cinema{height: 0.104rem; width: 0.254rem; position: absolute; top: 1.184rem; left: 2.704rem;}
+#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-cinema#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-cinema{height: 0.104rem; width: 0.254rem; position: absolute; left: 2.704rem; top: 1.184rem;}
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8 .group.textual > .title.headline { color: rgb(226, 230, 233); }
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8 .group.textual > .title.headline a:hover { color: rgb(227, 228, 230); }
 #u-29ad877b-cd6d-4760-a181-ac87f50c6fb8#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8 .group.textual > .text.paragraph { color: rgb(244, 241, 240); }
@@ -1300,7 +1341,7 @@ display: none;
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual{opacity: 1; font-size: 0.154rem; line-height: 0.234rem; height: 2.464rem; width: 12.604rem; position: absolute; left: 1.814rem; top: 0.914rem;}
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-subtitle#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-subtitle{font-size: 0.234rem; line-height: 0.304rem; width: 7.204rem; position: absolute; top: 0.124rem; left: 2.714rem;}
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-paragraph#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-paragraph{font-size: 0.154rem; line-height: 0.234rem; width: 7.204rem; position: absolute; top: 1.184rem; left: 2.714rem;}
-#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-cinema#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-cinema{height: 0.104rem; width: 0.254rem; position: absolute; top: 0.904rem; left: 2.704rem;}
+#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-cinema#u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-cinema{height: 0.104rem; width: 0.254rem; position: absolute; left: 2.704rem; top: 0.904rem;}
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad#u-384eb0fe-2207-45ab-a69d-97de301bb0ad .group.textual > .title.subtitle { color: rgb(226, 230, 233); }
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad#u-384eb0fe-2207-45ab-a69d-97de301bb0ad .group.textual > .title.subtitle a:hover { color: rgb(227, 228, 230); }
 #u-384eb0fe-2207-45ab-a69d-97de301bb0ad#u-384eb0fe-2207-45ab-a69d-97de301bb0ad .group.textual > .text.paragraph { color: rgb(244, 241, 240); }
@@ -1358,7 +1399,7 @@ display: none;
             </g>
         </g>
     </g>
-</svg></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full aspect_natural line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_large chapter stack mixed i first_chapter w_cover w_media w_headline w_title w_decoration media_gte_narrow media_gte_half media_lt_wide media_lt_full media_landscape crop_true w_medium_headline w_medium_title stack mixed" itemid="4b65af34-8b6a-4f9f-983c-8ce087f6576c" itemtype="image" diff_index="0" index="mixed" kind="stack" score="5.625" missed="0.375" tag="article" id="u-4b65af34-8b6a-4f9f-983c-8ce087f6576c"><div kind="group" index="mixed" class="group mixed group mixed" id="u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed"><a kind="media" index="cover" class="vfld media cover vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="940" max-height="529" href="https://s3-us-west-2.amazonaws.com/the-grid-img/p/2ccc5605b091220b58365fe69204dd3ed08fa430.jpg" id="u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover"><picture id="u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/35c605c704aa052564bea2b38c56d22a/passthrough.jpg?height=405&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=720, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/893b0b889d8ed443d4438bbc13e84e22/passthrough.jpg?height=529&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=940 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/308e2068134503e1c1c1edb25106fd29/passthrough.jpg?height=406&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=721, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/893b0b889d8ed443d4438bbc13e84e22/passthrough.jpg?height=529&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=940 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/250820d18f6b2785f540ded07e7e98f4/passthrough.jpg?height=217&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=385, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/17dc6ca736eb94623af11ca3370db854/passthrough.jpg?height=434&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=770 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/2854fba3131957e3952b0c0e7d4380c9/passthrough.jpg?height=325&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=577, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/893b0b889d8ed443d4438bbc13e84e22/passthrough.jpg?height=529&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=940 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/250820d18f6b2785f540ded07e7e98f4/passthrough.jpg?height=217&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=385, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/17dc6ca736eb94623af11ca3370db854/passthrough.jpg?height=434&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=770 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/2854fba3131957e3952b0c0e7d4380c9/passthrough.jpg?height=325&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=577, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/893b0b889d8ed443d4438bbc13e84e22/passthrough.jpg?height=529&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=940 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a><h1 kind="title" index="headline" class="medium medium_headline medium_title title headline vfld-leader title headline" specificity="0.25" itemprop="title" id="u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-t-headline"><span class="text-decoration" id="u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-t-headline-span">GIVING A CRAP: <wbr class="w480 w960"></wbr>SANITATION A <wbr class="w481 w961 w1799"></wbr>BASIC <wbr class="w480 w960 w1800"></wbr>FUNCTION BUT A <wbr class="w480 w481 w960 w961 w1799"></wbr>COMPLEX ISSUE</span></h1></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack textual i w_headline w_title w_paragraph w_text w_separator w_decoration w_medium_headline w_medium_title w_long_paragraph w_long_text stack textual" itemid="29ad877b-cd6d-4760-a181-ac87f50c6fb8" itemtype="text" diff_index="4" index="textual" kind="stack" score="5.625" missed="0.375" tag="article" id="u-29ad877b-cd6d-4760-a181-ac87f50c6fb8"><div kind="group" index="textual" class="group textual group textual" id="u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual"><h1 kind="title" index="headline" class="medium medium_headline medium_title title headline vfld-leader title headline" specificity="0.25" itemprop="title" id="u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-t-headline"><span class="text-decoration" id="u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-t-headline-span">GIVING A CRAP: SANITATION A <wbr class="w480 w960"></wbr>BASIC <wbr class="w481 w961 w1799"></wbr>FUNCTION BUT A <wbr class="w480 w960 w1800"></wbr>COMPLEX ISSUE</span></h1><div kind="decoration" index="separator" class="decoration separator decoration separator svg" id="u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-desktop"><?xml version="1.0" encoding="utf-8"?>
+</svg></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full aspect_natural line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_large chapter stack mixed i first_chapter w_cover w_media w_headline w_title w_decoration media_gte_narrow media_gte_half media_lt_wide media_lt_full media_landscape crop_true w_medium_headline w_medium_title stack mixed" itemid="4b65af34-8b6a-4f9f-983c-8ce087f6576c" itemtype="image" diff_index="0" index="mixed" kind="stack" score="3.625" missed="0.375" tag="article" id="u-4b65af34-8b6a-4f9f-983c-8ce087f6576c"><div kind="group" index="mixed" class="group mixed group mixed" id="u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed"><a kind="media" index="cover" class="vfld media cover vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="940" max-height="529" href="https://s3-us-west-2.amazonaws.com/the-grid-img/p/2ccc5605b091220b58365fe69204dd3ed08fa430.jpg" id="u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover"><picture id="u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/35c605c704aa052564bea2b38c56d22a/passthrough.jpg?height=405&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=720, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/893b0b889d8ed443d4438bbc13e84e22/passthrough.jpg?height=529&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=940 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/308e2068134503e1c1c1edb25106fd29/passthrough.jpg?height=406&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=721, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/893b0b889d8ed443d4438bbc13e84e22/passthrough.jpg?height=529&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=940 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/250820d18f6b2785f540ded07e7e98f4/passthrough.jpg?height=217&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=385, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/17dc6ca736eb94623af11ca3370db854/passthrough.jpg?height=434&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=770 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/2854fba3131957e3952b0c0e7d4380c9/passthrough.jpg?height=325&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=577, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/893b0b889d8ed443d4438bbc13e84e22/passthrough.jpg?height=529&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=940 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/250820d18f6b2785f540ded07e7e98f4/passthrough.jpg?height=217&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=385, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/17dc6ca736eb94623af11ca3370db854/passthrough.jpg?height=434&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=770 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/2854fba3131957e3952b0c0e7d4380c9/passthrough.jpg?height=325&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=577, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/893b0b889d8ed443d4438bbc13e84e22/passthrough.jpg?height=529&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2ccc5605b091220b58365fe69204dd3ed08fa430.jpg&width=940 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a><h1 kind="title" index="headline" class="medium medium_headline medium_title title headline vfld-leader title headline" specificity="0.25" itemprop="title" id="u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-t-headline"><span class="text-decoration" id="u-4b65af34-8b6a-4f9f-983c-8ce087f6576c-g-mixed-t-headline-span">GIVING A CRAP: <wbr class="w480 w960"></wbr>SANITATION A <wbr class="w481 w961 w1799"></wbr>BASIC <wbr class="w480 w960 w1800"></wbr>FUNCTION BUT A <wbr class="w480 w481 w960 w961 w1799"></wbr>COMPLEX ISSUE</span></h1></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack textual i w_headline w_title w_paragraph w_text w_separator w_decoration w_medium_headline w_medium_title w_long_paragraph w_long_text stack textual" itemid="29ad877b-cd6d-4760-a181-ac87f50c6fb8" itemtype="text" diff_index="4" index="textual" kind="stack" score="1.625" missed="0.375" tag="article" id="u-29ad877b-cd6d-4760-a181-ac87f50c6fb8"><div kind="group" index="textual" class="group textual group textual" id="u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual"><h1 kind="title" index="headline" class="medium medium_headline medium_title title headline vfld-leader title headline" specificity="0.25" itemprop="title" id="u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-t-headline"><span class="text-decoration" id="u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-t-headline-span">GIVING A CRAP: SANITATION A <wbr class="w480 w960"></wbr>BASIC <wbr class="w481 w961 w1799"></wbr>FUNCTION BUT A <wbr class="w480 w960 w1800"></wbr>COMPLEX ISSUE</span></h1><div kind="decoration" index="separator" class="decoration separator decoration separator svg" id="u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-desktop"><?xml version="1.0" encoding="utf-8"?>
 
 <svg preserveAspectRatio="none" id="u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-desktop-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 279.1 612 233.8" enable-background="new 0 279.1 612 233.8" xml:space="preserve">
@@ -1379,7 +1420,7 @@ display: none;
 <rect y="279.1" fill="#808285" width="233.8" height="233.8"/>
 <rect x="378.2" y="279.1" fill="#808285" width="233.8" height="233.8"/>
 </svg>
-</div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="4a233c15-19a6-4964-9d3e-68f85b9fe197" itemtype="text" diff_index="1" index="column" kind="stack" score="2.625" missed="0.375" tag="article" id="u-4a233c15-19a6-4964-9d3e-68f85b9fe197"><div kind="group" index="column" class="group column group column" id="u-4a233c15-19a6-4964-9d3e-68f85b9fe197-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-4a233c15-19a6-4964-9d3e-68f85b9fe197-g-column-t-paragraph"><p><span class="first-letter">T</span>he exposure to public health issues through this new <wbr class="w480 w960"></wbr>job was my first direct <wbr class="w481 w961 w1799"></wbr>experience of the actual <wbr class="w480 w960 w1800"></wbr>situation in the community. As an engineer, I am very <wbr class="w480 w960 w1799"></wbr>well <wbr class="w481 w961"></wbr>trained in sanitation technology, from the <wbr class="w480 w960 w1800"></wbr>simplest type to the most <wbr class="w1799"></wbr>advanced.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>H</span>owever, I found that in spite of the country&#x2019;s rapid <wbr class="w480 w960"></wbr>modernisation, even <wbr class="w481 w961 w1799"></wbr>something as simple as a basic <wbr class="w480 w960 w1800"></wbr>toilet has not been adopted in rural areas as <wbr class="w481 w961 w1799"></wbr>quickly as <wbr class="w480 w960"></wbr>other technologies such as television or mobile <wbr class="w480 w960 w1800"></wbr>phones.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>P</span>articipating in the national program of Community <wbr class="w480 w960"></wbr>Based Total Sanitation since <wbr class="w481 w961 w1799"></wbr>2010, and in the <wbr class="w480 w960"></wbr>Provincial <wbr class="w1800"></wbr>Working Group of Drinking Water and <wbr class="w480 w960"></wbr>Sanitation in <wbr class="w481 w961 w1799"></wbr>Bali, I realised that encouraging people to <wbr class="w480 w960"></wbr>use the <wbr class="w1800"></wbr>technologies is even more <wbr class="w481 w961 w1799"></wbr>complex than <wbr class="w480 w960"></wbr>designing the technology.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>I</span>t is a multi-dimensional and multi-level issue. The <wbr class="w480 w960"></wbr>complexity is even greater <wbr class="w481 w961 w1799"></wbr>when we realise that it is <wbr class="w480 w960"></wbr>not <wbr class="w1800"></wbr>just using the toilet, but ensuring that the waste is <wbr class="w480 w481 w960 w961 w1799"></wbr>safely disposed of.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="a2bda6a7-88f4-4ca0-ba7d-d19bc0d1c3d9" itemtype="text" diff_index="1" index="column" kind="stack" score="2.625" missed="0.375" tag="article" id="u-a2bda6a7-88f4-4ca0-ba7d-d19bc0d1c3d9"><div kind="group" index="column" class="group column group column" id="u-a2bda6a7-88f4-4ca0-ba7d-d19bc0d1c3d9-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-a2bda6a7-88f4-4ca0-ba7d-d19bc0d1c3d9-g-column-t-paragraph"><p><span class="first-letter">I</span> am very grateful to receive, for the second time, an <wbr class="w480 w960"></wbr>Australia Award. My PhD <wbr class="w481 w961 w1799"></wbr>studies at Griffith University <wbr class="w480 w960"></wbr>in <wbr class="w1800"></wbr>Queensland are focused on conducting research <wbr class="w480 w481 w960 w961 w1799"></wbr>into the determinants of toilet adoption and <wbr class="w480 w960"></wbr>sustainability <wbr class="w1800"></wbr>in rural areas.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>G</span>riffith University&#x2019;s Centre for Population and <wbr class="w480 w960"></wbr>Environmental Health has <wbr class="w481 w961 w1799"></wbr>international experience in <wbr class="w480 w960"></wbr>studying <wbr class="w1800"></wbr>complex issues in public and environmental <wbr class="w480 w481 w960 w961 w1799"></wbr>health, particularly in developing countries.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>T</span>he Centre has been assisting me to comprehensively <wbr class="w480 w960"></wbr>understand the <wbr class="w481 w961 w1799"></wbr>determinants of toilet adoption and <wbr class="w480 w960 w1800"></wbr>sustainability in rural areas by integrating <wbr class="w481 w961 w1799"></wbr>individual, <wbr class="w480 w960"></wbr>cultural, structural, environment and service factors <wbr class="w480 w960 w1800"></wbr>within one <wbr class="w481 w961 w1799"></wbr>framework.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>H</span>opefully the findings from my study and the <wbr class="w480 w960"></wbr>framework I have used may <wbr class="w481 w961 w1799"></wbr>facilitate communication <wbr class="w480 w960"></wbr>and <wbr class="w1800"></wbr>collaboration among stakeholders in the <wbr class="w480 w960"></wbr>sanitation <wbr class="w481 w961 w1799"></wbr>sector, in order to systematically and <wbr class="w480 w960"></wbr>comprehensively <wbr class="w1800"></wbr>understand and address <wbr class="w481 w961 w1799"></wbr>the issues <wbr class="w480 w960"></wbr>of sanitation access and sustainability.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_short_paragraph w_short_text stack column" itemid="d9b02c53-ef69-40c5-b104-063c43b921b0" itemtype="text" diff_index="1" index="column" kind="stack" score="2.625" missed="0.375" tag="article" id="u-d9b02c53-ef69-40c5-b104-063c43b921b0"><div kind="group" index="column" class="group column group column" id="u-d9b02c53-ef69-40c5-b104-063c43b921b0-g-column"><div kind="text" index="paragraph" class="text-decoration short short_paragraph short_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-d9b02c53-ef69-40c5-b104-063c43b921b0-g-column-t-paragraph"><p><span class="first-letter">I</span> hope I can make a small contribution to the world <wbr class="w480 w960"></wbr>effort to end open defecation <wbr class="w481 w961 w1799"></wbr>and to provide access to <wbr class="w480 w960 w1800"></wbr>basic toilets for all by 2030.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack textual i last_chapter w_subtitle w_title w_paragraph w_text w_separator w_decoration w_medium_subtitle w_medium_title w_medium_paragraph w_medium_text stack textual" itemid="384eb0fe-2207-45ab-a69d-97de301bb0ad" itemtype="text" diff_index="4" index="textual" kind="stack" score="5.625" missed="0.375" tag="article" id="u-384eb0fe-2207-45ab-a69d-97de301bb0ad"><div kind="group" index="textual" class="group textual group textual" id="u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual"><h2 kind="title" index="subtitle" class="medium medium_subtitle medium_title title subtitle vfld-leader title subtitle" specificity="0.25" itemprop="subtitle" id="u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-subtitle"><span class="text-decoration" id="u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-subtitle-span"><p>Know More:</p><a href="https://www.griffith.edu.au/environment-planning-architecture/centre-environment-population-health"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Centre for Population and Environmental Health</a></span></h2><div kind="decoration" index="separator" class="decoration separator decoration separator svg" id="u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-desktop"><svg viewBox="0 0 72 72" preserveAspectRatio="none"><use xlink:href="#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-desktop-svg"></use></svg></div><div kind="decoration" index="separator" class="decoration separator decoration separator svg" id="u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-cinema"><svg viewBox="0 0 72 72" preserveAspectRatio="none"><use xlink:href="#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-cinema-svg"></use></svg></div><div kind="text" index="paragraph" class="text-decoration medium medium_paragraph medium_text text paragraph vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-paragraph"><p><em>This article was written for the Federal Government&#x2019;s <wbr class="w480 w960"></wbr>Australia Awards, which <wbr class="w481 w961 w1799"></wbr>bring together scholarships <wbr class="w480 w960 w1800"></wbr>and fellowships administered by the Department of <wbr class="w480 w481 w960 w961 w1799"></wbr>Foreign Affairs and Trade, the Department of <wbr class="w480 w960"></wbr>Education <wbr class="w1800"></wbr>and the Australian Centre <wbr class="w481 w961 w1799"></wbr>for International <wbr class="w480 w960"></wbr>Agricultural Research.</em><em data-grid-id="a9d61f6d-5403-4119-8019-ee74af92d504">The author is dual Australia <wbr class="w480 w960"></wbr>Awards <wbr class="w1799"></wbr>scholar <wbr class="w481 w961 w1800"></wbr>and environmental engineer,<strong>Ms Ni <wbr class="w480 w960"></wbr>Made Utami Dwipayanti</strong>, who is <wbr class="w1799"></wbr>studying a PhD <wbr class="w481 w961"></wbr>at <wbr class="w480 w960"></wbr>Griffith <wbr class="w1800"></wbr>University&#x2019;s<a href="https://www.griffith.edu.au/environment-planning-architecture/centre-environment-population-health">Centre for Population and <wbr class="w480 w960"></wbr>Environmental <wbr class="w1799"></wbr>Health</a>.</em></p></div><div kind="decoration" index="separator" class="decoration separator decoration separator svg" id="u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-mobile"><svg viewBox="0 0 72 72" preserveAspectRatio="none"><use xlink:href="#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-mobile-svg"></use></svg></div></div></article><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_short_headline w_short_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-alternate-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-alternate-g-heading-t-headline"><a class="text-decoration" href="../rss.xml" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-alternate-g-heading-t-headline-a">IMPACT @ Griffith Sciences feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title w_list w_data w_medium_list w_medium_data layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_cover w_media w_headline w_title w_separator w_decoration w_leader w_trailer media_gte_narrow media_gte_half media_lt_wide media_lt_full media_landscape crop_true w_medium_headline w_medium_title w_paragraph w_text w_long_paragraph w_long_text w_short_paragraph w_short_text w_subtitle w_medium_subtitle w_medium_paragraph w_medium_text layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-desktop-l-one-3-l-one"></div><style id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-color">body{background-color: rgba(32, 21, 21, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title w_list w_data w_medium_list w_medium_data layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_cover w_media w_headline w_title w_separator w_decoration w_leader w_trailer media_gte_narrow media_gte_half media_lt_wide media_lt_full media_landscape crop_true w_medium_headline w_medium_title w_paragraph w_text w_long_paragraph w_long_text w_short_paragraph w_short_text w_subtitle w_medium_subtitle w_medium_paragraph w_medium_text layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-cinema-l-one-3-l-one"></div><style id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-color">body{background-color: rgba(32, 21, 21, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+</div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="4a233c15-19a6-4964-9d3e-68f85b9fe197" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-4a233c15-19a6-4964-9d3e-68f85b9fe197"><div kind="group" index="column" class="group column group column" id="u-4a233c15-19a6-4964-9d3e-68f85b9fe197-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-4a233c15-19a6-4964-9d3e-68f85b9fe197-g-column-t-paragraph"><p><span class="first-letter">T</span>he exposure to public health issues through this new <wbr class="w480 w960"></wbr>job was my first direct <wbr class="w481 w961 w1799"></wbr>experience of the actual <wbr class="w480 w960 w1800"></wbr>situation in the community. As an engineer, I am very <wbr class="w480 w960 w1799"></wbr>well <wbr class="w481 w961"></wbr>trained in sanitation technology, from the <wbr class="w480 w960 w1800"></wbr>simplest type to the most <wbr class="w1799"></wbr>advanced.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>H</span>owever, I found that in spite of the country&#x2019;s rapid <wbr class="w480 w960"></wbr>modernisation, even <wbr class="w481 w961 w1799"></wbr>something as simple as a basic <wbr class="w480 w960 w1800"></wbr>toilet has not been adopted in rural areas as <wbr class="w481 w961 w1799"></wbr>quickly as <wbr class="w480 w960"></wbr>other technologies such as television or mobile <wbr class="w480 w960 w1800"></wbr>phones.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>P</span>articipating in the national program of Community <wbr class="w480 w960"></wbr>Based Total Sanitation since <wbr class="w481 w961 w1799"></wbr>2010, and in the <wbr class="w480 w960"></wbr>Provincial <wbr class="w1800"></wbr>Working Group of Drinking Water and <wbr class="w480 w960"></wbr>Sanitation in <wbr class="w481 w961 w1799"></wbr>Bali, I realised that encouraging people to <wbr class="w480 w960"></wbr>use the <wbr class="w1800"></wbr>technologies is even more <wbr class="w481 w961 w1799"></wbr>complex than <wbr class="w480 w960"></wbr>designing the technology.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>I</span>t is a multi-dimensional and multi-level issue. The <wbr class="w480 w960"></wbr>complexity is even greater <wbr class="w481 w961 w1799"></wbr>when we realise that it is <wbr class="w480 w960"></wbr>not <wbr class="w1800"></wbr>just using the toilet, but ensuring that the waste is <wbr class="w480 w481 w960 w961 w1799"></wbr>safely disposed of.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="a2bda6a7-88f4-4ca0-ba7d-d19bc0d1c3d9" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-a2bda6a7-88f4-4ca0-ba7d-d19bc0d1c3d9"><div kind="group" index="column" class="group column group column" id="u-a2bda6a7-88f4-4ca0-ba7d-d19bc0d1c3d9-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-a2bda6a7-88f4-4ca0-ba7d-d19bc0d1c3d9-g-column-t-paragraph"><p><span class="first-letter">I</span> am very grateful to receive, for the second time, an <wbr class="w480 w960"></wbr>Australia Award. My PhD <wbr class="w481 w961 w1799"></wbr>studies at Griffith University <wbr class="w480 w960"></wbr>in <wbr class="w1800"></wbr>Queensland are focused on conducting research <wbr class="w480 w481 w960 w961 w1799"></wbr>into the determinants of toilet adoption and <wbr class="w480 w960"></wbr>sustainability <wbr class="w1800"></wbr>in rural areas.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>G</span>riffith University&#x2019;s Centre for Population and <wbr class="w480 w960"></wbr>Environmental Health has <wbr class="w481 w961 w1799"></wbr>international experience in <wbr class="w480 w960"></wbr>studying <wbr class="w1800"></wbr>complex issues in public and environmental <wbr class="w480 w481 w960 w961 w1799"></wbr>health, particularly in developing countries.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>T</span>he Centre has been assisting me to comprehensively <wbr class="w480 w960"></wbr>understand the <wbr class="w481 w961 w1799"></wbr>determinants of toilet adoption and <wbr class="w480 w960 w1800"></wbr>sustainability in rural areas by integrating <wbr class="w481 w961 w1799"></wbr>individual, <wbr class="w480 w960"></wbr>cultural, structural, environment and service factors <wbr class="w480 w960 w1800"></wbr>within one <wbr class="w481 w961 w1799"></wbr>framework.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>H</span>opefully the findings from my study and the <wbr class="w480 w960"></wbr>framework I have used may <wbr class="w481 w961 w1799"></wbr>facilitate communication <wbr class="w480 w960"></wbr>and <wbr class="w1800"></wbr>collaboration among stakeholders in the <wbr class="w480 w960"></wbr>sanitation <wbr class="w481 w961 w1799"></wbr>sector, in order to systematically and <wbr class="w480 w960"></wbr>comprehensively <wbr class="w1800"></wbr>understand and address <wbr class="w481 w961 w1799"></wbr>the issues <wbr class="w480 w960"></wbr>of sanitation access and sustainability.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_short_paragraph w_short_text stack column" itemid="d9b02c53-ef69-40c5-b104-063c43b921b0" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-d9b02c53-ef69-40c5-b104-063c43b921b0"><div kind="group" index="column" class="group column group column" id="u-d9b02c53-ef69-40c5-b104-063c43b921b0-g-column"><div kind="text" index="paragraph" class="text-decoration short short_paragraph short_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-d9b02c53-ef69-40c5-b104-063c43b921b0-g-column-t-paragraph"><p><span class="first-letter">I</span> hope I can make a small contribution to the world <wbr class="w480 w960"></wbr>effort to end open defecation <wbr class="w481 w961 w1799"></wbr>and to provide access to <wbr class="w480 w960 w1800"></wbr>basic toilets for all by 2030.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack textual i last_chapter w_subtitle w_title w_paragraph w_text w_separator w_decoration w_medium_subtitle w_medium_title w_medium_paragraph w_medium_text stack textual" itemid="384eb0fe-2207-45ab-a69d-97de301bb0ad" itemtype="text" diff_index="4" index="textual" kind="stack" score="1.625" missed="0.375" tag="article" id="u-384eb0fe-2207-45ab-a69d-97de301bb0ad"><div kind="group" index="textual" class="group textual group textual" id="u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual"><h2 kind="title" index="subtitle" class="medium medium_subtitle medium_title title subtitle vfld-leader title subtitle" specificity="0.25" itemprop="subtitle" id="u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-subtitle"><span class="text-decoration" id="u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-subtitle-span"><p>Know More:</p><a href="https://www.griffith.edu.au/environment-planning-architecture/centre-environment-population-health"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Centre for Population and Environmental Health</a></span></h2><div kind="decoration" index="separator" class="decoration separator decoration separator svg" id="u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-desktop"><svg viewBox="0 0 72 72" preserveAspectRatio="none"><use xlink:href="#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-desktop-svg"></use></svg></div><div kind="decoration" index="separator" class="decoration separator decoration separator svg" id="u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-cinema"><svg viewBox="0 0 72 72" preserveAspectRatio="none"><use xlink:href="#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-cinema-svg"></use></svg></div><div kind="text" index="paragraph" class="text-decoration medium medium_paragraph medium_text text paragraph vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-t-paragraph"><p><em>This article was written for the Federal Government&#x2019;s <wbr class="w480 w960"></wbr>Australia Awards, which <wbr class="w481 w961 w1799"></wbr>bring together scholarships <wbr class="w480 w960 w1800"></wbr>and fellowships administered by the Department of <wbr class="w480 w481 w960 w961 w1799"></wbr>Foreign Affairs and Trade, the Department of <wbr class="w480 w960"></wbr>Education <wbr class="w1800"></wbr>and the Australian Centre <wbr class="w481 w961 w1799"></wbr>for International <wbr class="w480 w960"></wbr>Agricultural Research.</em><em data-grid-id="a9d61f6d-5403-4119-8019-ee74af92d504">The author is dual Australia <wbr class="w480 w960"></wbr>Awards <wbr class="w1799"></wbr>scholar <wbr class="w481 w961 w1800"></wbr>and environmental engineer,<strong>Ms Ni <wbr class="w480 w960"></wbr>Made Utami Dwipayanti</strong>, who is <wbr class="w1799"></wbr>studying a PhD <wbr class="w481 w961"></wbr>at <wbr class="w480 w960"></wbr>Griffith <wbr class="w1800"></wbr>University&#x2019;s<a href="https://www.griffith.edu.au/environment-planning-architecture/centre-environment-population-health">Centre for Population and <wbr class="w480 w960"></wbr>Environmental <wbr class="w1799"></wbr>Health</a>.</em></p></div><div kind="decoration" index="separator" class="decoration separator decoration separator svg" id="u-384eb0fe-2207-45ab-a69d-97de301bb0ad-g-textual-d-separator-mobile"><svg viewBox="0 0 72 72" preserveAspectRatio="none"><use xlink:href="#u-29ad877b-cd6d-4760-a181-ac87f50c6fb8-g-textual-d-separator-mobile-svg"></use></svg></div></div></article><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_short_headline w_short_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-alternate-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-alternate-g-heading-t-headline"><a class="text-decoration" href="../rss.xml" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-alternate-g-heading-t-headline-a">IMPACT @ Griffith Sciences feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title w_list w_data w_medium_list w_medium_data layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_cover w_media w_headline w_title w_separator w_decoration w_leader w_trailer media_gte_narrow media_gte_half media_lt_wide media_lt_full media_landscape crop_true w_medium_headline w_medium_title w_paragraph w_text w_long_paragraph w_long_text w_short_paragraph w_short_text w_subtitle w_medium_subtitle w_medium_paragraph w_medium_text layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-desktop-l-one-3-l-one"></div><style id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-color">body{background-color: rgba(32, 21, 21, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title w_list w_data w_medium_list w_medium_data layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_cover w_media w_headline w_title w_separator w_decoration w_leader w_trailer media_gte_narrow media_gte_half media_lt_wide media_lt_full media_landscape crop_true w_medium_headline w_medium_title w_paragraph w_text w_long_paragraph w_long_text w_short_paragraph w_short_text w_subtitle w_medium_subtitle w_medium_paragraph w_medium_text layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-cinema-l-one-3-l-one"></div><style id="u-0578e1d5-2bbe-424a-8f8f-cc4a0b133af2-color">body{background-color: rgba(32, 21, 21, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-20
  * http://eightmedia.github.io/hammer.js
  *
@@ -1906,9 +1947,11 @@ global.Hamburger = require('./hamburger');
 
 global.Highlighter = require('./highlighter');
 
+global.Player = require('./player');
+
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./animator":3,"./hamburger":4,"./highlighter":5,"./paginator":7,"hammerjs/hammer.min.js":1,"picturefill/dist/picturefill.min.js":2}],7:[function(require,module,exports){
+},{"./animator":3,"./hamburger":4,"./highlighter":5,"./paginator":7,"./player":8,"hammerjs/hammer.min.js":1,"picturefill/dist/picturefill.min.js":2}],7:[function(require,module,exports){
 var appendPage, mainpage, page, ref, ref1, urls;
 
 page = require('./reflow');
@@ -2009,7 +2052,192 @@ module.exports = function() {
 };
 
 
-},{"./reflow":8}],8:[function(require,module,exports){
+},{"./reflow":9}],8:[function(require,module,exports){
+var Player, Youtube, iframe, revealed, rgb2hex;
+
+iframe = null;
+
+Youtube = null;
+
+Player = function(id, src, width, height, color, bg) {
+  if (src.indexOf('youtube') > -1) {
+    src += '&color=white&theme=light&modestbranding=1';
+  }
+  src = src.replace('COLOR', color).replace('BG', bg);
+  if (location.protocol !== 'https:') {
+    src = src.replace('https:', 'http:');
+  }
+  iframe = document.createElement('iframe');
+  iframe.id = id;
+  iframe.setAttribute('allowfullscreen', '');
+  iframe.src = src;
+  iframe.width = width;
+  iframe.height = height;
+  iframe.style.width = '100%';
+  iframe.style.height = '100%';
+  iframe.style.left = 0;
+  iframe.style.right = 0;
+  iframe.style.position = 'absolute';
+  iframe.style.opacity = 0.2;
+  iframe.onload = function() {
+    return iframe.style.opacity = 1;
+  };
+  return iframe;
+};
+
+revealed = null;
+
+Player.reveal = function(iframe) {
+  var diff, i, left, len, parent, play, ref, ref1, sibling, target, top, translateX, translateY;
+  while (target = (target || iframe).parentNode) {
+    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
+      if (target.parentNode.classList.contains('group')) {
+        parent = target.parentNode;
+      } else {
+        parent = target;
+      }
+      revealed = iframe;
+      play = parent.getElementsByClassName('play')[0];
+      left = target.offsetWidth - play.offsetLeft - play.offsetWidth;
+      top = -play.offsetTop;
+      play.style.webkitTransformOrigin = 'top right';
+      play.style.webkitTransform = 'translateX(' + left + 'px) translateY(' + top + 'px) scale(0.5)';
+      target.classList.add('revealed');
+      ref1 = parent.parentNode.childNodes;
+      for (i = 0, len = ref1.length; i < len; i++) {
+        sibling = ref1[i];
+        if (sibling.nodeType === 1 && sibling !== parent) {
+          translateX = translateY = null;
+          if ((diff = sibling.offsetLeft + sibling.offsetWidth - parent.offsetLeft) > 2 && parent.offsetLeft >= sibling.offsetLeft) {
+            translateX = -diff;
+          }
+          if ((diff = target.offsetLeft + target.offsetWidth - sibling.offsetLeft) > 2 && parent.offsetLeft <= sibling.offsetLeft) {
+            if (!translateX || Math.abs(diff) < Math.abs(translateX)) {
+              translateX = diff;
+            }
+          }
+          if ((diff = sibling.offsetTop + sibling.offsetHeight - parent.offsetTop) > 2 && parent.offsetTop >= sibling.offsetTop) {
+            translateY = -diff;
+          }
+          if ((diff = target.offsetTop + target.offsetHeight - sibling.offsetTop) > 2 && parent.offsetTop <= sibling.offsetTop) {
+            if (!translateY || Math.abs(diff) < Math.abs(translateY)) {
+              translateY = diff;
+            }
+          }
+          if (Math.abs(translateX) > Math.abs(translateY)) {
+            sibling.style.webkitTransform = 'translateY(' + translateY + 'px)';
+          } else {
+            sibling.style.webkitTransform = 'translateX(' + translateX + 'px)';
+          }
+          console.log(translateX, translateY, sibling);
+        }
+      }
+    }
+  }
+};
+
+Player.hide = function(iframe) {
+  var i, len, parent, play, ref, ref1, sibling;
+  while (parent = (parent || iframe).parentNode) {
+    if ((ref = parent.classList) != null ? ref.contains('revealed') : void 0) {
+      parent.classList.remove('revealed');
+      if (parent.parentNode.classList.contains('group')) {
+        parent = parent.parentNode;
+      }
+      play = parent.getElementsByClassName('play')[0];
+      play.style.webkitTransform = '';
+      ref1 = parent.parentNode.childNodes;
+      for (i = 0, len = ref1.length; i < len; i++) {
+        sibling = ref1[i];
+        sibling.style.webkitTransform = '';
+      }
+    }
+  }
+  return revealed = null;
+};
+
+window.addEventListener('resize', function() {
+  return setTimeout(function() {
+    return requestAnimationFrame(function() {
+      if (revealed) {
+        if (revealed.offsetWidth) {
+          return Player.reveal(revealed);
+        } else {
+          return Player.stop(revealed);
+        }
+      }
+    });
+  }, 10);
+});
+
+Player.stop = function(iframe) {
+  var old;
+  old = iframe;
+  iframe.style.opacity = 0;
+  setTimeout(function() {
+    var ref;
+    return (ref = old.parentNode) != null ? ref.removeChild(old) : void 0;
+  }, 300);
+  Player.hide(iframe);
+  return iframe = null;
+};
+
+document.addEventListener('click', function(e) {
+  var bg, color, header, parent, play, ref, ref1, results, styles, target;
+  target = e.target;
+  results = [];
+  while (target) {
+    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
+      if (play = target.getElementsByClassName('play')[0]) {
+        if ((iframe != null ? iframe.parentNode : void 0) === target) {
+          Player.stop(iframe);
+        } else {
+          if (iframe) {
+            Player.stop(iframe);
+          }
+          color = bg = null;
+          header = (ref1 = target.parentNode.parentNode.getElementsByClassName('title')[0]) != null ? ref1.firstChild : void 0;
+          parent = header || play;
+          while (parent) {
+            if (parent.nodeType === 1) {
+              styles = window.getComputedStyle(parent);
+              if (styles.color.indexOf('rgba') === -1 || !styles.color.match(/,\s*0\)/)) {
+                if (color == null) {
+                  color = styles.color;
+                }
+              }
+              if (styles['background-color'].indexOf('rgba') === -1 || !styles['background-color'].match(/,\s*0\)/)) {
+                if (bg == null) {
+                  bg = styles['background-color'];
+                }
+              }
+            }
+            parent = parent.parentNode;
+          }
+          iframe = Player(play.id + '-player', play.getAttribute('data-src'), play.getAttribute('data-width'), play.getAttribute('data-height'), rgb2hex(color), rgb2hex(bg));
+          target.appendChild(iframe);
+          Player.reveal(iframe);
+        }
+        e.preventDefault();
+        break;
+      }
+    }
+    results.push(target = target.parentNode);
+  }
+  return results;
+});
+
+rgb2hex = function(rgb) {
+  rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
+  if (rgb && rgb.length === 4) {
+    return ("0" + parseInt(rgb[1], 10).toString(16)).slice(-2) + ("0" + parseInt(rgb[2], 10).toString(16)).slice(-2) + ("0" + parseInt(rgb[3], 10).toString(16)).slice(-2);
+  }
+};
+
+window.exports = window.Player = Player;
+
+
+},{}],9:[function(require,module,exports){
 module.exports = {
   reflow: function(container) {
     var counter, heights, hidden, hole, holed, holes, i, id, ids, index, j, k, l, last, layout, layouts, len, len1, len2, len3, m, mutations, name, node, ref, ref1, ref2, stack, stacks;
@@ -2274,7 +2502,7 @@ module.exports = function(callback) {
   } else {
     protocol = '';
   }
-  url = protocol + "//cdn.thegrid.io/gss/gss-document/1.2.4/gss.document.parser.js";
+  url = protocol + "//cdn.thegrid.io/gss/gss-document/1.2.8/gss.document.parser.js";
   if (location.toString().indexOf('//localhost:8080') > -1) {
     return module.exports.load(protocol + "//localhost:8080/node_modules/gss-document/dist/gss.document.parser.js", callback, function() {
       return module.exports.load(url, callback);
